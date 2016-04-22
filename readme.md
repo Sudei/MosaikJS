@@ -28,8 +28,25 @@ $('#mosaic').mosaikJS();
 ### In HTML
 
 ``` html
-<div id="example">
-    <div class="plot"></div>
+<div id="mosaic">
+    <div class="mosaikjs-bg-project"></div>
+    <div class="mosaikjs-wrapper">
+        <div class="mosaikjs-list-boxes">
+
+            ...
+
+            <div class="case">
+                <div class="case-img-container" data-cover="img/covers/sea.jpg" data-img="img/covers/sea-small.jpg"></div>
+                <div class="case-infos">
+                    <p class="info-title">Beyond the oceans</p>
+                    <p class="info-bs">John williams' album</p>
+                </div>
+            </div>
+
+            ...
+
+        </div>
+    </div>
 </div>
 ```
 
