@@ -1,0 +1,152 @@
+.MosaikJS{
+    position: relative;
+
+    .mosaikjs-bg-project{
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        top: 0px;
+        left: 0;
+        right: 0;
+        height: 100%;
+
+        -webkit-transition:all .3s ease;
+        -moz-transition:all .3s ease;
+        -ms-transition:all .3s ease;
+        -o-transition:all .3s ease;
+        transition:all .3s ease
+    }
+
+    .mosaikjs-wrapper{
+        .mosaikjs-list-boxes{
+            .case{
+                // width: 33.33%;
+                float: left;
+                background: transparent;
+                position: relative;
+                z-index: 5;
+                cursor: pointer;
+
+                .case-img-container{
+                    overflow: hidden;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    z-index: 8;
+                    -moz-transition: 0.5s;
+                    -o-transition: 0.5s;
+                    -webkit-transition: 0.5s;
+                    transition: 0.5s;
+
+                    background: no-repeat center center;
+                    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+                    background-size: cover; /* version standardisée */
+                }
+
+                .case-infos{
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 90%;
+                    left: 5%;
+                    z-index: 10;
+
+                    .info-title{
+                        margin: 0;
+                        text-align: center;
+                        font-size: 27px;
+                        color: #FFF;
+                        // font-family: 'SimploW00-Black';
+                        text-transform: uppercase;
+                        letter-spacing: 3px;
+                        letter-spacing: 3px;
+                        -moz-transition: 0.5s;
+                        -o-transition: 0.5s;
+                        -webkit-transition: 0.5s;
+                        transition: 0.5s;
+                        -moz-transition-delay: 0.2s;
+                        -o-transition-delay: 0.2s;
+                        -webkit-transition-delay: 0.2s;
+                        transition-delay: 0.2s;
+                    }
+
+                    .info-bs {
+                        margin: 0;
+                        text-align: center;
+                        font-size: 18px;
+                        color: #FFF;
+                        // font-family: 'Yellowtail';
+                        margin-top: 5px;
+                        -moz-transition: 0.5s;
+                        -o-transition: 0.5s;
+                        -webkit-transition: 0.5s;
+                        transition: 0.5s;
+                    }
+
+                }
+
+                &.unactive{
+
+                    .case-img-container{
+                        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+                        opacity: 0;
+                    }
+
+                    .info-title{
+                        -moz-transform: translateY(10px);
+                        -ms-transform: translateY(10px);
+                        -webkit-transform: translateY(10px);
+                        transform: translateY(10px);
+                        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+                        opacity: 0.4;
+                        -moz-transition-delay: 0s;
+                        -o-transition-delay: 0s;
+                        -webkit-transition-delay: 0s;
+                        transition-delay: 0s;
+                    }
+
+                    .info-bs {
+                        -moz-transform: translateY(20px);
+                        -ms-transform: translateY(20px);
+                        -webkit-transform: translateY(20px);
+                        transform: translateY(20px);
+                        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+                        opacity: 0;
+                        -moz-transition-delay: 0.2s;
+                        -o-transition-delay: 0.2s;
+                        -webkit-transition-delay: 0.2s;
+                        transition-delay: 0.2s;
+                    }
+                }
+
+            }
+        }
+
+        .sep {
+            position: absolute;
+            background: #FFF;
+            z-index: 11;
+            pointer-events: none;
+
+            &.sep-hz {
+               height: 10px;
+               width: 100%;
+               margin-top: -5px;
+           }
+
+            &.sep-vt{
+                top: 0;
+                width: 10px;
+                height: 100%;
+                margin-left: -5px;
+            }
+        }
+
+        .clear {
+            clear: both;
+        }
+
+    }
+}

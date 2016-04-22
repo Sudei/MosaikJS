@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MosaikJS - Kevin Wenger</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Prism -->
+    <link rel="stylesheet" href="css/prism.css">
+    <!-- MosaikJS -->
+    <link rel="stylesheet" href="../src/css/mosaikjs.css">
+    <!-- Custom -->
+    <link rel="stylesheet" href="css/demo.css">
+
+    <!-- Fonts Lato -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body >
+
+    <div id="mainmenu" class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="">MosaikJS</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class=""><a href="#examples">Examples</a></li>
+                    <li class=""><a href="#usage">Usage</a></li>
+                    <li class=""><a href="#options">Options</a></li>
+                    <li class=""><a href="#roadmap">Development Roadmap</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <a class="visible-md visible-lg ribbon" href="https://github.com/sudei">
+        <img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png">
+    </a>
+
+    <div class="container-fluid">
+
+        <!-- ################################## HOME BLOCK ################################## -->
+        <div id="home" class="homeblock colorblock block">
+            <div class="block-container row">
+                <div id="description-home" class="col-xs-12">
+                    <div class="wrapper">
+                        <p class="developer">Kevin Wenger presents</p>
+                        <h1 class="maintext">MosaikJS, automatic mosaic builder</h1>
+                        <p class="descriptiontext">Arranging images in a dynamic animated mosaic for a liquid container or a fixed size container.</p>
+
+                        <!-- Links to repositories and twitter here -->
+                        <div class="repositories">
+                            <a href="https://github.org/sudei/MosaikJS" title="Bitbucket Repository" class="Github Repository"><i class="fa fa-github"></i></a>
+                            <a href="https://bitbucket.org/WengerK/MosaikJS" title="Bitbucket Repository" class=""><i class="fa fa-bitbucket"></i></a>
+                            <a href="https://bitbucket.org/WengerK/MosaikJS/downloads" title="Direct Download" class=""><i class="fa fa-cloud-download"></i></i></a>
+                            <a href='https://twitter.com/share?hashtags="javascript jquery"&original_referer=""&related=wengerk&text="MosaikJS.js: automatic mosaic builder"&via=wengerk' title="Share on Twitter" class="Direct Download"><i class="fa fa-twitter"></i></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hexagon">
+                    <div class="outer"></div>
+                    <div class="inner"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ################################## EXAMPLE GUI BLOCK ################################## -->
+        <div id="examples" class="whiteblock block">
+            <div class="block-container">
+
+                <div class="hexagon hexagon-top">
+                    <div class="outer"></div>
+                    <div class="inner"></div>
+                </div>
+
+                <h2 class="title">Examples</h2>
+                <div class="description">Play with me ! Change my properties and click on <strong>redraw</strong> to see the result</div>
+
+                <div class="row a-left block-post">
+                    <div class="row live_example">
+                        <div class="plot col-xs-12">
+                            <div id="mosaic">
+                                <div class="mosaikjs-bg-project"></div>
+                                <div class="mosaikjs-wrapper">
+                                    <div class="mosaikjs-list-boxes">
+                                        <div class="case">
+                                            <div class="case-img-container" data-cover="img/covers/felin.jpg" data-img="img/covers/felin-small.png"></div>
+                                            <div class="case-infos">
+                                                <p class="info-title">Ferocity</p>
+                                                <p class="info-bs">John williams' album</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="case">
+                                            <div class="case-img-container" data-cover="img/covers/car.jpg" data-img="img/covers/car-small.png"></div>
+                                            <div class="case-infos">
+                                                <p class="info-title">Stolen keys</p>
+                                                <p class="info-bs">John williams' album</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="case">
+                                            <div class="case-img-container" data-cover="img/covers/strawberries.jpg" data-img="img/covers/strawberries-small.png"></div>
+                                            <div class="case-infos">
+                                                <p class="info-title">Stawberries</p>
+                                                <p class="info-bs">John williams' album</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="case">
+                                            <div class="case-img-container" data-cover="img/covers/piano.jpg" data-img="img/covers/piano-small.png"></div>
+                                            <div class="case-infos">
+                                                <p class="info-title">Handsome</p>
+                                                <p class="info-bs">John williams' album</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="case">
+                                            <div class="case-img-container" data-cover="img/covers/sea.jpg" data-img="img/covers/sea-small.png"></div>
+                                            <div class="case-infos">
+                                                <p class="info-title">Beyond the oceans</p>
+                                                <p class="info-bs">John williams' album</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="case">
+                                            <div class="case-img-container" data-cover="img/covers/road.jpg" data-img="img/covers/road-small.png"></div>
+                                            <div class="case-infos">
+                                                <p class="info-title">RoadTrip</p>
+                                                <p class="info-bs">John williams' album</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <div id="events" class="events">
+                                <div class="title">Events</div>
+                                <div class="event inactive" id="enter">enter</div>
+                                <div class="event inactive" id="leave">leave</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ################################## USAGE BLOCK ################################## -->
+        <div id="usage" class="colorblock block">
+            <div class="block-container">
+                <div class="hexagon hexagon-top">
+                    <div class="outer"></div>
+                    <div class="inner"></div>
+                </div>
+
+                <h2 class="title">Usage</h2>
+                <div class="description">how to include MosaikJS into your projects</div>
+
+                <div class="block-post row a-left">
+                    <div class="col-md-12">
+
+                        <!-- // STEP 1 // -->
+                        <div>
+                            <p>1. Add libraries and dependencies</p>
+                            <pre><code class="language-markup">
+&lt;!-- jQuery 1.11.0 --&gt;
+&lt;script src="//code.jquery.com/jquery-2.2.3.min.js"&gt;&lt;/script&gt;
+&lt;!-- MosaikJS libraries --&gt;
+&lt;script src="lib/mosaikjs.js"&gt;&lt;/script&gt;
+&lt;!-- MosaikJS stylesheet --&gt;
+&lt;link rel="stylesheet" href="lib/mosaikjs.css"&gt;
+                            </code></pre>
+                            <br/>
+                        </div>
+
+                        <!-- // STEP 2 // -->
+                        <div>
+                            <p>2. Generate Markup</p>
+                            <pre><code class="language-markup">
+&lt;div id="mosaic"&gt;
+    &lt;div class="mosaikjs-bg-project"&gt;&lt;/div&gt;
+    &lt;div class="mosaikjs-wrapper"&gt;
+        &lt;div class="mosaikjs-list-boxes"&gt;
+
+            ...
+
+            &lt;div class="case"&gt;
+                &lt;div class="case-img-container" data-cover="img/covers/sea.jpg" data-img="img/covers/sea-small.jpg"&gt;&lt;/div&gt;
+                &lt;div class="case-infos"&gt;
+                    &lt;p class="info-title"&gt;Beyond the oceans&lt;/p&gt;
+                    &lt;p class="info-bs"&gt;John williams' album&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            ...
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                            </code></pre>
+                            <br/>
+                        </div>
+
+                        <!-- // STEP 3 // -->
+                        <div>
+                            <p>3. Initilize your mosaic and choose your options</p>
+                            <pre><code class="language-javascript">
+var mosaic = new MosaikJS({
+    elementWidth: '33.3%',
+    elementHeight: "210px",
+    breakpoints:[
+        {size: '768', elementWidth: '50%', elementHeight: "180px" },
+    ],
+    features: {
+        'responsive': true,
+    }
+});
+                            </code></pre>
+                            <br/>
+                        </div>
+
+                        <!-- // STEP BONUS // -->
+                        <div>
+                            <p>(bonus). Add Event Listener</p>
+                            <pre><code class="language-javascript">
+var container = document.querySelector('#mosaic');
+container.addEventListener('enter', function (e) {
+    // do stuff ...
+}, false);
+                            </code></pre>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ################################## OPTIONS AND EVENTS BLOCK ################################## -->
+        <div class="whtieblock block">
+            <div id="options" class="block-container">
+                <div class="hexagon hexagon-top">
+                    <div class="outer"></div>
+                    <div class="inner"></div>
+                </div>
+
+                <h2 class="title">Options</h2>
+                <div class="description">Object options, callback and events</div>
+
+                <div class="row a-left">
+                    <div class="col-md-6">
+                        <h4 class="a-center">options</h4>
+                        <dl>
+                            <dt>elementWidth: '50%'</dt>
+                            <dd>pixel/percent value (with suffix 'px' or '%'). This is the default, or mobile on responsive, width for each element/case.</dd>
+
+                            <dt>elementHeight: '100px'</dt>
+                            <dd>pixel/percent value (with suffix 'px' or '%'). This is the default, or mobile on responsive, height for each element/case.</dd>
+
+                            <dt>breakpoints: [ {size: '768', elementWidth: '50%', elementHeight: "180px" }, ... ]</dt>
+                            <dd>array of breakpoint. Describe elements width/height by given breakpoints.</dd>
+
+                            <dt>features: { 'responsive': false }</dt>
+                            <dd>true, false. Allow the mosaic to be responsive. A responsive mosaic use the breakpoints to rearrange element width/height. The given width should be in percent to work properly with responsive.</dd>
+                        </dl>
+
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="a-center">events</h4>
+                        <dl>
+                            <dt>enter( element )</dt>
+                            <dd>this event is invoked when mouse enter in a element/case.</dd>
+
+                            <dt>leave( element )</dt>
+                            <dd>this event is invoked when mouse enter in a element/case.</dd>
+                        </dl>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ################################## ROADMAP BLOCK ################################## -->
+        <div id="roadmap" class="roadmap block colorblock">
+            <div class="block-container">
+                <div class="hexagon hexagon-top">
+                    <div class="outer"></div>
+                    <div class="inner"></div>
+                </div>
+
+                <h2 class="title">Roadmap</h2>
+                <div class="description">Changelogs and futur updates</div>
+
+                <div class="row a-left">
+                    <div class="col-md-6">
+                        <h4 class="a-center">next changes</h4>
+                        <dl>
+                            <dt>v.1.0.6 - aaaa.mm.dd</dt>
+                            <dd class="tasks-list">
+                                <div class=""><span class="tasks-list-mark"></span> <span class="tasks-list-desc">Add feature : Responsive - true,false</span></div>
+                                <div class="ticked"><span class="tasks-list-mark"></span> <span class="tasks-list-desc">Add feature : Fit texts - true,false</span></div>
+                            </dd>
+                            <dt>v.1.1 - aaaa.mm.dd</dt>
+                            <dd class="tasks-list">
+                                <div class=""><span class="tasks-list-mark"></span> <span class="tasks-list-desc">Add method : add - add new bubble</span></div>
+                                <div class=""><span class="tasks-list-mark"></span> <span class="tasks-list-desc">Add method : remove - remove bubble by id</span></div>
+                            </dd>
+                            <dt>v.1.1.5 - aaaa.mm.dd</dt>
+                            <dd class="tasks-list">
+                                <div class=""><span class="tasks-list-mark"></span> <span class="tasks-list-desc">Remove jQuery dependency</span></div>
+                            </dd>
+                        </dl>
+
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="a-center">changelog</h4>
+                        <dl>
+                            <dt>v.1.0.0 - 2015.02.02</dt>
+                            <dd>First release.</dd>
+                            <dt>v.1.0.5 - 2015.02.22</dt>
+                            <dd>
+                                <div>Add event : dragstart - fired at the start of the drag (bubble)</div>
+                                <div>Add event : drag - during the drag (bubble)</div>
+                                <div>Add event : dragend - fired when dragging stops (bubble)</div>
+                                <div>Add event : enter - fired when enter hover a bubble</div>
+                                <div>Add event : leave - fired when leave a bubble</div>
+                            </dd>
+                            <dt>v.1.0.6 - 2015.02.24</dt>
+                            <dd>
+                                <div>Add feature : Responsive - true,false</div>
+                                <div>Add feature : Fit texts - true,false</div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ################################## FOOTER BLOCK ################################## -->
+        <footer class="block colorblock footerblock">
+            <div class="row">
+                <div class="col-md-6 social col-md-push-6" >
+                    <a href="http://www.twitter.com/WengerK" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="http://ch.linkedin.com/in/kevinwenger" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="http://www.facebook.com/kevin.wenger.399" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://bitbucket.org/WengerK" target="_blank"><i class="fa fa-bitbucket"></i></a>
+                    <a href="http://www.github.com/Sudei"><i class="fa fa-github"></i></a>
+                    <a href="http://instagram.com/wengerk" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="http://plus.google.com/+KevinWenger" target="_blank"><i class="fa fa-google-plus"></i></a>
+                    <a href="http://www.pinterest.com/sudei/" target="_blank"><i class="fa fa-pinterest"></i></a>
+                </div>
+                <div class="col-md-6 col-md-pull-6">
+                    side project <i class="fa fa-code text-warning"></i> with <i class="fa fa-heart anim_pulse text-danger"></i> by <a href="www.kevin-wenger.ch">Kevin Wenger</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+</body>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/prism.js"></script>
+
+<script src="../src/mosaikjs.js"></script>
+
+<script src="js/demo.js"></script>
+
+
+</html>

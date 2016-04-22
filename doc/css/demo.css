@@ -1,0 +1,610 @@
+/**************************************************************************************************
+   GENERAL
+**************************************************************************************************/
+html,html a{
+    -webkit-font-smoothing:subpixel-antialiased !important;
+    text-decoration:none;
+    font-size:16px;
+}
+body{
+    background:#fff;
+    font-family:'Lato',sans-serif;
+    letter-spacing:0;
+    line-height:1.5;
+    margin:0;
+    padding:0;
+    overflow:visible;
+    color:#282828
+}
+button:hover,input.send:hover{
+    background-color:#00c3b5
+}
+button:active,input.send:active{
+    background-color:#009085
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight:400;
+    text-transform:uppercase
+}
+h1{
+    font-size:3rem;
+}
+h2{
+    font-size:2.25rem;
+}
+h3{
+    font-size:1.75rem;
+}
+h4{
+    font-size:1.5rem;
+}
+a{
+    color:#00a99d
+}
+
+/**************************************************************************************************
+   HEXAGON SEPARATOR
+**************************************************************************************************/
+.hexagon{
+    position:absolute;
+    bottom:-70px;
+    left:50%;
+    width:80px;
+    height:92px;
+    margin-left:-40px
+}
+.hexagon .outer{
+    position:relative;
+    float:left;
+    width:80px;
+    height:46px;
+    background:#fff
+}
+.hexagon .outer:before{
+    border:1px solid #fff;
+    border-bottom-width:23px;
+    border-top-width:23px;
+    border-left-width:40px;
+    border-right-width:40px;
+    content:"";
+    width:0;
+    height:0;
+    border-color:transparent transparent #fff transparent;
+    float:left;
+    margin-top:-46px;
+    position:relative
+}
+.hexagon .outer:after{
+    border:1px solid #fff;
+    border-bottom-width:23px;
+    border-top-width:23px;
+    border-left-width:40px;
+    border-right-width:40px;
+    content:"";
+    width:0;
+    height:0;
+    border-color:#fff transparent transparent transparent;
+    float:left;
+    margin-top:46px;
+    position:relative
+}
+.hexagon .inner{
+    position:relative;
+    float:left;
+    width:68px;
+    height:40px;
+    background-color:#00a99d;
+    margin-top:-43px;
+    margin-left:6px
+}
+.hexagon .inner:before{
+    border:1px solid #fff;
+    border-bottom-width:20px;
+    border-top-width:20px;
+    border-left-width:34px;
+    border-right-width:34px;
+    content:"";
+    width:0;
+    height:0;
+    border-color:transparent transparent #00a99d transparent;
+    float:left;
+    margin-top:-40px;
+    position:relative
+}
+.hexagon .inner:after{
+    border:1px solid #fff;
+    border-bottom-width:20px;
+    border-top-width:20px;
+    border-left-width:34px;
+    border-right-width:34px;
+    content:"";
+    width:0;
+    height:0;
+    border-color:#00a99d transparent transparent transparent;
+    float:left;
+    margin-top:40px;
+    position:relative
+}
+.hexagon-top{
+    top:-25px
+}
+
+/**************************************************************************************************
+   BLOCKS
+**************************************************************************************************/
+/* REMOVE PADDING BOOTSTRAP */
+.container-fluid{
+    margin:0;
+    padding: 0;
+}
+.block .block-container.row,
+.block .block-container > .row{
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.whiteblock{
+    color:#282828
+}
+.whiteblock a{
+    color:#00a99d;
+    -webkit-transition:all .5s ease;
+    -moz-transition:all .5s ease;
+    -ms-transition:all .5s ease;
+    -o-transition:all .5s ease;
+    transition:all .5s ease
+}
+.whiteblock a:hover{
+    color:#c8c8c8
+}
+.colorblock{
+    background:#00a99d;
+    color:#fff
+}
+.colorblock a{
+    color:#fff
+}
+.colorblock .button{
+    display:inline-block;
+    padding:.8em 2em;
+    background:rgba(0,0,0,0.2);
+    border-radius:4px;
+    -webkit-transition:all .5s ease;
+    -moz-transition:all .5s ease;
+    -ms-transition:all .5s ease;
+    -o-transition:all .5s ease;
+    transition:all .5s ease
+}
+.colorblock .button:hover{
+    background:rgba(0,0,0,0.4)
+}
+.colorblock .button:active{
+    background:rgba(255,255,255,0.1)
+}
+.grayblock{
+    background:#efefef;
+    color:#282828
+}
+.block{
+    display:inline-block;
+    width:100%;
+    position:relative;
+    padding:0 0 100px 0;
+    z-index:1
+}
+.block .block-container{
+    max-width: 1200px;
+    margin: auto;
+    text-align:center;
+    padding:80px 0 0 0
+}
+.block .block-container > .title{
+    text-transform:uppercase;
+    text-align:center;
+    font-weight:300;
+    margin:40px 0 .2em 0
+}
+.block .block-container .description{
+    font-size:20px;
+    font-weight:300;
+    text-align:center;
+    margin-bottom: 80px;
+}
+
+.block .block-container .a-left{
+    text-align: left;
+}
+
+.block .block-container .a-center{
+    text-align: center;
+}
+
+.block .block-container dl {
+    border: 8px solid #E8E8E8;
+    line-height: 18px;
+}
+.block .block-container dt {
+    background: #f6f6f6;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+.block .block-container dd {
+    background: #eee;
+    color: #8a9a9b;
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0;
+    padding: 5px 10px 5px 40px;
+}
+
+.colorblock.block .block-container dl {
+    border: 8px solid #04948B;
+}
+.colorblock.block .block-container dt {
+    background: #1AB1A7;
+}
+.colorblock.block .block-container dd {
+    background: #01988E;
+    color: #fff;
+}
+
+
+/**************************************************************************************************
+   TOP MENU
+**************************************************************************************************/
+#mainmenu{
+    border-bottom:1px solid rgba(0,0,0,0.1);
+    box-shadow:0 1px 0 rgba(255,255,255,0.1);
+    background:#00a99d
+}
+#mainmenu{
+    text-transform: uppercase;
+}
+#mainmenu .navbar-toggle .icon-bar{
+     background-color: rgba(0,0,0,0.3);
+}
+#mainmenu .navbar-brand{
+    margin: .2em 0 0 1em;
+    color: rgba(0,0,0,0.3);
+    font-weight: 700;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+#mainmenu .navbar-nav {
+    margin: 7.5px -15px;
+}
+#mainmenu .navbar-nav li a{
+    color:#fff;
+    display:inline-block;
+    padding:.6em 1em;
+    margin:0 .5em;
+    border-radius:4px;
+    -webkit-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    -ms-transition:all .3s ease;
+    -o-transition:all .3s ease;
+    transition:all .3s ease
+}
+#mainmenu .navbar-nav li a:hover,
+#mainmenu .navbar-nav li a:focus{
+    background:rgba(0,0,0,0.2)
+}
+#mainmenu .navbar-nav li a:active{
+    background:rgba(255,255,255,0.2)
+}
+
+/**************************************************************************************************
+   HOME BLOCK
+**************************************************************************************************/
+.homeblock #description-home{
+    text-align:center;
+    position:relative;
+    margin-top:180px;
+}
+.homeblock #example-home{
+    margin-top:180px;
+}
+.homeblock #description-home .wrapper{
+    max-width:550px;
+    margin: 0 auto;
+}
+.homeblock #description-home .wrapper .developer{
+    font-size:1.125rem;
+    color:rgba(0,0,0,0.3);
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+.homeblock #description-home .wrapper .maintext{
+    margin:50px 0;
+    font-weight:400;
+    letter-spacing:1px;
+    line-height:1.3;
+    text-transform:uppercase;
+}
+.homeblock #description-home .wrapper .descriptiontext{
+    font-weight:300;
+    color:rgba(255,255,255,0.8);
+    line-height:1.5;
+    float:right;
+}
+.homeblock #description-home .wrapper .repositories{
+    clear:both;
+    margin:2em auto;
+    width: 250px;
+}
+.homeblock #description-home .wrapper .repositories a{
+    display:inline-block;
+    float:left;
+    position:relative;
+    font-size:3rem;
+    margin-right:1.5rem;
+    color:rgba(0,0,0,0.4);
+}
+.homeblock #description-home .wrapper .repositories a:last-child{
+    margin-right: 0;
+}
+
+.homeblock #description-home .wrapper .repositories i{
+    -webkit-transition:all .5s ease;
+    -moz-transition:all .5s ease;
+    -ms-transition:all .5s ease;
+    -o-transition:all .5s ease;
+    transition:all .5s ease;
+}
+.homeblock #description-home .wrapper .repositories i:hover{
+    color:#fff;
+
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/**************************************************************************************************
+   LIVE EXAMPLE BLOCK
+**************************************************************************************************/
+#examples .live_example{
+    margin: 0;
+}
+#examples .live_example .dg.main .close-button{
+    width:100%;
+    position: relative!important;
+}
+#examples .live_example #events {
+    overflow: hidden;
+    margin-top: 25px;
+    font-size: 15px;
+}
+#examples .live_example #events .title{
+    line-height: 19px;
+    height: 20px;
+    cursor: pointer;
+    padding: 4px;
+    text-align: center;
+    background-color: #000;
+    color: #eee;
+    font: 11px 'Lucida Grande', sans-serif;
+    text-shadow: 0 -1px 0 #111;
+}
+#examples .live_example #events .event{
+    transition: background-color 0.5s ease-out;
+    color: white;
+    padding: 7px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+#examples .live_example #events .event.inactive {
+    background-color: black;
+}
+#examples .live_example #events .event.active {
+    background: #323131;
+}
+
+/**************************************************************************************************
+   ROADMAP BLOCK
+**************************************************************************************************/
+.roadmap .tasks-list{
+    padding-top: 10px;
+}
+.roadmap .tasks-list > div{
+    margin-bottom: 5px;
+}
+
+.roadmap .tasks-list-mark{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #c4cbd2;
+}
+
+.roadmap .ticked .tasks-list-mark{
+    border-color: #39ca74;
+}
+.roadmap .ticked .tasks-list-mark::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   margin: -5px 0 0 -6px;
+    height: 4px;
+   width: 8px;
+    border: solid #39ca74;
+    border-width: 0 0 4px 4px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+    box-sizing: initial;
+}
+.roadmap .ticked .tasks-list-desc {
+    color: #34bf6e;
+    text-decoration: line-through;
+}
+
+/**************************************************************************************************
+   FOOTER BLOCK
+**************************************************************************************************/
+footer.block {
+    text-align:center;
+    letter-spacing:1px;
+    color: #000;
+    text-align: center;
+    padding: 40px 0;
+}
+footer.block .row{
+    margin:0;
+    padding: 0;
+}
+footer.block a,
+footer.block a:hover{
+    text-decoration: none;
+}
+
+footer.block .social a {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+footer.block .social a:hover i:before {
+    color: #000;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+/* Pounding heart animation */
+i.anim_pulse {
+    display: inline-block;
+    font-size: 1rem;
+    color: #e00;
+    -webkit-animation-name: beat;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-direction: alternate;
+    margin: 0;
+}
+@-webkit-keyframes beat {
+    from {
+        -webkit-transform:scale(.75);
+    }
+    to {
+        -webkit-transform: scale(1.1);
+    }
+}
+
+/**************************************************************************************************
+   MEDIA QUERIES
+**************************************************************************************************/
+@media screen and (max-width:1024px){
+    .mainmenu{
+        position:absolute
+    }
+    .mainmenu .menuwrapper a.logoblock,.mainmenu .menuwrapper .socialblock{
+        display:none
+    }
+    .homeblock .block-container #description-home{
+        text-align:center;
+        width:auto;
+        /*float:left;*/
+        position:relative;
+        margin-top:40px;
+        padding:0 60px
+    }
+    .homeblock .block-container #example-home{
+        margin-top:40px;
+    }
+    .homeblock .block-container #description-home .wrapper{
+        max-width:none
+    }
+    .homeblock .block-container #description-home .wrapper .descriptiontext{
+        max-width:none
+    }
+    .homeblock .block-container #description-home .wrapper .repositories{
+    /*float:none;*/
+        text-align:center;
+        /*display:inline-block*/
+        width:100%;
+    }
+    .homeblock #description-home .wrapper .repositories a{
+        float:none;
+    }
+    .block .block-container{
+        max-width:960px;
+    }
+    .block .block-container .block-post {
+        padding: 60px 40px;
+    }
+}
+
+@media screen and (max-width:800px){
+    .mainmenu .menuwrapper .menulist{
+        padding:0;
+        float:left;
+        width:100%
+    }
+    .mainmenu .menuwrapper .menulist ul.items{
+        float:left;
+        width:100%
+    }
+    .mainmenu .menuwrapper .menulist ul.items li.menuitem{
+        display:none;
+        width:100%
+    }
+    .mainmenu .menuwrapper .menulist ul.items li.menuitem a{
+        width:100%;
+        font-size:20px;
+        border-radius:0;
+        padding:.5em 0;
+        margin:0
+    }
+    .mainmenu .menuwrapper .menulist ul.items li.menuitem:first-child{
+        display:inline-block
+    }
+    .mainmenu .menuwrapper .menulist ul.items:hover li.menuitem{
+        display:inline-block
+    }
+    .mainmenu .menuwrapper .menulist ul.items:hover li.menuitem a{
+        border-bottom:1px solid rgba(0,0,0,0.1)
+    }
+}
+
+@media screen and (max-width:540px){
+    h1{
+        font-size:30px
+    }
+    h2{
+        font-size:26px
+    }
+    .block{
+        padding-bottom:40px
+    }
+    .block .block-container{
+        padding-top:40px
+    }
+    .block .block-container h2.title,.block .block-container .description{
+        margin-left:10px;
+        margin-right:10px
+    }
+    .homeblock .block-container #description-home{
+        padding:0
+    }
+    .homeblock .block-container #description-home .wrapper{
+        margin:0 10px
+    }
+    .homeblock .block-container #description-home .wrapper .developer{
+    font-size:.9em
+    }
+}
